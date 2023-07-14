@@ -16,6 +16,10 @@ const gameSchema = new mongoose.Schema(
         ref: "Try",
       },
     ],
+    ended: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );
