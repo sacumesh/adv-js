@@ -1,0 +1,34 @@
+# Dependency directories
+/node_modules
+
+# Build artifacts
+/dist
+/build
+
+# Environment variables
+.env
+.env.*
+
+# IDE and editor files
+/.idea
+*.sublime-*
+*.swp
+*.swo
+.DS_Store
+
+# Log files
+*.log
+
+# Testing files
+/coverage
+
+# Cache files
+/.cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
+*.bak
+*.tmp
+*.pid
