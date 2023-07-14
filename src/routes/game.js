@@ -14,6 +14,10 @@ Router.post("/", async (request, response) => {
     },
   ]);
 
+  if (word.length == 0) {
+    return response.status(404).json({ msg: "No words found" });
+  }
+
   const game = new GameModel({
     word: word[0]._id,
     tries: [],

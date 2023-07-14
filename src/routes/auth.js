@@ -43,9 +43,15 @@ Router.post("/register", async (request, response) => {
 
     request.session.user = user;
 
-    return response.status(200).json({
-      user: user,
-    });
+    const res = {
+      id: user._id,
+      active: user.active,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+      email: user.email,
+    };
+
+    return response.status(200).json(res);
   } catch (error) {
     return response.status(500).json({
       error: "Internal server error.",
